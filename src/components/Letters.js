@@ -1,46 +1,32 @@
 import React, { Component } from "react";
+import Letter from "./Letter";
 
 class Letters extends Component {
-  showLetter(le) {
-    console.log(le);
-    return <button>{le}</button>;
+  AllLetters(params) {
+    let arrayOfLetters = [];
+    for (let key in params) {
+      arrayOfLetters.push(key);
+    }
+    return arrayOfLetters;
   }
   render() {
-    let letters = [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N",
-      "O",
-      "P",
-      "Q",
-      "R",
-      "S",
-      "T",
-      "U",
-      "V",
-      "W",
-      "X",
-      "Y",
-      "Z",
-    ];
-
-    // return <button>{letters}</button>;
-    return letters.map((e) => (
-      <div id="product">
-        <button id="buttonOfletter">{e}</button>
+    return (
+      <div id="buttonOfletter">
+        <h5>Hint is: {this.props.hint}</h5>
+        {this.AllLetters(this.props.allLetters).map((letter) => {
+          return (
+            <Letter
+              deleteTheLetter={this.props.deleteTheLetter}
+              char={letter}
+              value={this.props.allLetters[letter]}
+              solution={this.props.solution}
+              increaseScore={this.props.increaseScore}
+              decreaseScore={this.props.decreaseScore}
+            />
+          );
+        })}
       </div>
-    ));
+    );
   }
 }
 export default Letters;

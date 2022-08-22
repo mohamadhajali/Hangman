@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 class Score extends Component {
   render() {
-    let scoure = 100;
-    return <p>Scoure is :{scoure}</p>;
+    return <p>Scoure is :{this.props.score}</p>;
   }
 }
 export default Score;

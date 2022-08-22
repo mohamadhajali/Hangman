@@ -38,11 +38,11 @@
 }
 #undeScoure {
   font-size: 100px;
-  padding-top: 100px;
+  padding-top: 0px;
   padding-left: 90px;
 }
 #letters {
-  padding-top: 200px;
+  padding-top: 00px;
 }
 #product {
   display: inline-block;
@@ -51,8 +51,46 @@
   border: 1px solid green;
   grid-template-columns: repeat(4, 1fr);
 }
-#buttonOfletter {
-  width: inherit;
-  height: inherit;
-  grid-template-columns: repeat(4, 1fr);
+#underSoure {
+  font-size: 60px;
+  padding-left: 50px;
+}
+del {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  visibility: hidden;
+}
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+#win {
+  background-color: yellow;
+}
+#lost {
+  background-color: red;
 }
